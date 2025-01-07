@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.divHeader {
+    background-color: blue;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.divheaderitems {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    height: 60px;
+}
+
+.divheaderitems a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.divheaderitems a:hover {
+    background-color: darkblue;
+    border-radius: 5px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+    gap: 15px;
+}
+
+.auth {
+    display: flex;
+    gap: 15px;
+}
+
+.fa {
+    margin-right: 5px;
+}
+
+.left-section {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.right-section {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .divheaderitems {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .divheaderitems .links, .divheaderitems .auth {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .divheaderitems a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+}
