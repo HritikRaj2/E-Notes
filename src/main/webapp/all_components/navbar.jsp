@@ -111,7 +111,7 @@ body {
 			</div>
 			<div class="right-section auth">
 				<a href="login.jsp"><i class="fa fa-sign-in"></i> Login</a> 
-				<a href=""><i class="fa fa-user-plus"></i> Register</a>
+				<a href="register.jsp"><i class="fa fa-user-plus"></i> Register</a>
 			</div>
 		</div>
 	</div>

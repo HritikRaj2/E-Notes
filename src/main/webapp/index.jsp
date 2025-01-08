@@ -22,6 +22,13 @@
 </head>
 <body>
 	<%@include file="all_components/navbar.jsp"%>
+	<%@ page import="com.Db.DBConnect" %>
+	<%@ page import="java.sql.Connection" %>
+	
+	<%
+	DBConnect c=new DBConnect();
+	System.out.println(c);
+	%>
 	<div class="container-fluid back-img">
 		<div class="text-center">
 			<h1 class="text-white">
@@ -33,7 +40,7 @@
 				class="fa fa-user-plus" aria-hidden="true"></i>Register</a>
 		</div>
 	</div>
-	<%@include file="all_components/footer.jsp" %>
+	<%@include file="all_components/footer.jsp"%>
 
 </body>
 </html>

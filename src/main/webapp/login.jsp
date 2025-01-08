@@ -26,6 +26,7 @@
     width: 100%;
     max-width: 400px; /* Set maximum width for responsiveness */
     text-align: center; /* Center text inside the box */
+    margin-top:-13px;
 }
 
 .login-box h1 {
@@ -66,10 +67,10 @@ height:20px}
     <%@include file="all_components/navbar.jsp"%>
     <div class="backg">
         <div class="login-box">
-        <div class="logooo">Registration</div>
+        
             <h1>Login</h1>
             <form action="login_action.jsp" method="post">
-                <input type="text" name="username" placeholder="Username" required>
+                <input type="text" name="username" placeholder="Username or E-mail" required>
                 <input type="password" name="password" placeholder="Password" required>
                 <button type="submit">Login</button>
             </form>
