@@ -72,9 +72,9 @@
 		<div class="login-box">
 
 			<h1>Registration</h1>
-			<form action="login_action.jsp" method="post">
-				<input type="text" name="Fullname" placeholder="Full Name" required>
-				<input type="text" name="username" placeholder="Username or E-mail"
+			<form action="UserServlet" method="post">
+				<input type="text" name="fname" placeholder="Full Name" required>
+				<input type="text" name="uemail" placeholder="Username or E-mail"
 					required> <input type="password" name="password"
 					placeholder="Password" required>
 

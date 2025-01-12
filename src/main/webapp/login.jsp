@@ -69,9 +69,9 @@ height:20px}
         <div class="login-box">
         
             <h1>Login</h1>
-            <form action="login_action.jsp" method="post">
-                <input type="text" name="username" placeholder="Username or E-mail" required>
-                <input type="password" name="password" placeholder="Password" required>
+            <form action="loginServlet" method="post">
+                <input type="text" name="uemail" placeholder="Username or E-mail" required>
+                <input type="upassword" name="password" placeholder="Password" required>
                 <button type="submit">Login</button>
             </form>
         </div>

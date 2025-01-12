@@ -2,20 +2,20 @@ package com.Db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
 
 public class DBConnect {
-	Connection c;
-    Statement s;
+    private static Connection c;
 
-    public DBConnect() {
+    public static Connection getConn() {
         try {
-            
-            c = DriverManager.getConnection("jdbc:mysql:///enotes", "root", "raj@9676");
-            s = c.createStatement();
-        } catch (SQLException e) {
-            System.out.println(e);
+            if (c == null || c.isClosed()) { 
+                c = DriverManager.getConnection("jdbc:mysql://localhost:3306/enotes", "root", "raj@9676");
+                System.out.println("Connection established successfully!");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Failed to establish connection.");
         }
+        return c; 
     }
 }
