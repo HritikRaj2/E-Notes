@@ -16,6 +16,7 @@
 	<classpathentry kind="lib" path="D:/github/E-Notes/src/main/webapp/lib/mysql-connector-java-8.0.28.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="build/classes"/>

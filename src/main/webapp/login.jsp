@@ -71,7 +71,7 @@ height:20px}
             <h1>Login</h1>
             <form action="loginServlet" method="post">
                 <input type="text" name="uemail" placeholder="Username or E-mail" required>
-                <input type="upassword" name="password" placeholder="Password" required>
+                <input type="password" name="upassword" placeholder="Password" required>
                 <button type="submit">Login</button>
             </form>
         </div>

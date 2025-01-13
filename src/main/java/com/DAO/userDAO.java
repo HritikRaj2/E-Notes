@@ -15,7 +15,7 @@ public class userDAO {
 	{
 		boolean f=false;
 		try {
-			String query="insert into user(Name,Email,Password) values(???)";
+			String query = "INSERT INTO user(Name, Email, Password) VALUES (?, ?, ?)";
 			PreparedStatement ps=c.prepareStatement(query);
 			ps.setString(1,us.getName());
 			ps.setString(2,us.getEmail());
@@ -31,8 +31,8 @@ public class userDAO {
 		
 		return f;
 	}
-	public boolean loginUser(UserDetails us) {
-		boolean f=false;
+	public UserDetails loginUser(UserDetails us) {
+		UserDetails user=null;
 		try {
 			String query="select *from user where email=? and password=?";
 			PreparedStatement ps=c.prepareStatement(query);
@@ -40,11 +40,14 @@ public class userDAO {
 			ps.setString(2,us.getPassword());
 			ResultSet rs=ps.executeQuery();
 			if(rs.next()) {
-				f=true;
+				user=new UserDetails();
+				user.setName(rs.getString("Name"));
+				user.setEmail(rs.getString("Password"));
+				user.setPassword("Password");
 			}
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-		return f;
+		return user;
 	}
 }
